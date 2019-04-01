@@ -1,0 +1,9 @@
+universe = vanilla
+executable = $(job)
++JobFlavour = "longlunch"
+output = /afs/cern.ch/work/a/amlevin/condor/out/$(ClusterId).$(ProcId).out
+error = /afs/cern.ch/work/a/amlevin/condor/out/$(ClusterId).$(ProcId).out
+log = /afs/cern.ch/user/a/amlevin/nanoaod_production/condor/log/$(ClusterId).log
+requirements = (OpSysAndVer =?= "SLCern6")
+request_cpus = 1
+queue job matching files jobs/job*.sh
